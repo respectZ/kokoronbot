@@ -5,9 +5,14 @@
     "main": "index.js",
     "author": "chirality",
     "dependencies": {
-        "request": "^2.88.0",
         "express": "^4.17.1",
-        "sulla": "^1.1.1"
+        "request": "^2.88.0",
+        "sulla": "^1.1.1",
+        "ora": "^3.4.0",
+        "puppeteer": "^1.19.0",
+        "qrcode-terminal": "^0.12.0",
+        "rxjs": "^6.5.2",
+        "shelljs": "^0.8.3"
     },
     "scripts": {
         "start": "node index.js"

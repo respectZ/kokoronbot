@@ -1,0 +1,15 @@
+{
+    "name": "kokoronbot",
+    "version": "1.0.0",
+    "description": "weeb",
+    "main": "index.js",
+    "author": "chirality",
+    "dependencies": {
+        "request": "^2.88.0",
+        "express": "^4.17.1",
+        "sulla": "^1.1.1"
+    },
+    "scripts": {
+        "start": "node index.js"
+    }
+}

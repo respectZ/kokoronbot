@@ -34,7 +34,7 @@ function start(client) {
     				//bulan xx, tanggal xx
 					var res = findBirthday(tempDay, cmd[2].charAt(0).toUpperCase() + cmd[2].slice(1));
 					console.log("finding birthday at " + tempDay + (cmd[2].charAt(0).toUpperCase() + cmd[2].slice(1)));
-					if(res != null || res = "") {
+					if(res != null || res != "") {
 						client.sendText(message.from, res);
 						console.log("found birthday");
 					} else {
@@ -46,7 +46,7 @@ function start(client) {
     				var res = findBirthday(tempDay, months[month]);
     				console.log("findng birthday at " + tempDay + " " + months[month]);
 
-    				if(res != null || res = "") {
+    				if(res != null || res != "") {
 						client.sendText(message.from, res);
 						console.log("found birthday");
 					} else {
@@ -143,7 +143,7 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
     var result = getBirthday(day, months[month], year);
-    response.send((new Date().getHours()) + " " + day + " " + months[month] + " " + year + "\n" + result);
+    response.send(day + months[month] + year + "   " + (new Date().getHours()) + ":" + (new Date().getMinutes()) + "    " + result);
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });

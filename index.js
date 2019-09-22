@@ -125,8 +125,8 @@ app.set('port', (process.env.PORT || 5000));
 
 
 app.get('/', function(request, response) {
-    var result = 'App is running'
-    response.send(result);
+    var result = getBirthday(day, months[month], year);
+    response.send((new Date().getHours()) + " " + day + " " + months[month] + " " + year + "\n" + result);
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });

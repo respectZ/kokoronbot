@@ -19,7 +19,7 @@ function start(client) {
     if (message.body === 'Hi') {
       client.sendText(message.from, '👋 Hello from sulla!');
     }
-    console.log(message);
+    //console.log(message);
 
     //
     var cmd = message.body.split(" ");
@@ -32,10 +32,27 @@ function start(client) {
     			}
     			if(cmd[2]) {
     				//bulan xx, tanggal xx
-    				client.sendText(message.from, findBirthday(tempDay, cmd[2].charAt(0).toUpperCase() + cmd[2].slice(1)));
+					var res = findBirthday(tempDay, cmd[2].charAt(0).toUpperCase() + cmd[2].slice(1));
+					console.log("finding birthday at " + tempDay + (cmd[2].charAt(0).toUpperCase() + cmd[2].slice(1)));
+					if(res != null || res = "") {
+						client.sendText(message.from, res);
+						console.log("found birthday");
+					} else {
+						console.log("noone birthday");
+					}
+    				
     			} else {
     				//bulan ini, tanggal xx
-    				client.sendText(message.from, findBirthday(tempDay, months[month]));
+    				var res = findBirthday(tempDay, months[month]);
+    				console.log("findng birthday at " + tempDay + " " + months[month]);
+
+    				if(res != null || res = "") {
+						client.sendText(message.from, res);
+						console.log("found birthday");
+					} else {
+						console.log("noone birthday");
+					}
+
     			}
     		}
     	} else {
